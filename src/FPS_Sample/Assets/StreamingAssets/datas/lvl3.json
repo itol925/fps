@@ -1,0 +1,29 @@
+
+
+
+
+{
+	"name": "小成",
+
+	"needKillNum": 30,
+	"maxPassNum": 5,
+	"initArrowNum": 10,
+
+	"bowRotateSpeed": 12,
+	"bowRotateLeftAngle": -45,
+	"bowRotateRightAngle": 45,
+
+	"initArrowCDTime": 0,
+	"arrowBirdReward": 5,
+
+	"bornBirdSpeed": [35, 40],
+	"arrowBirdSpeed": [25, 30],
+	"normalBirdSpeed": [20, 25],
+
+	"bornBirdHeight": [90, 100],
+	"arrowBirdHeight": [60, 80],
+	"normalBirdHeight": [40, 50],
+
+	"birdIngredients": [2, 3, 10],
+	"birdInterval":[0.5, 1.5]
+}

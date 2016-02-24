@@ -1,0 +1,29 @@
+
+
+
+
+{
+	"name": "雷厉风行",
+
+	"needKillNum": 50,
+	"maxPassNum": 1,
+	"initArrowNum": 3,
+
+	"bowRotateSpeed": 16,
+	"bowRotateLeftAngle": -45,
+	"bowRotateRightAngle": 45,
+
+	"initArrowCDTime": 0,
+	"arrowBirdReward": 5,
+
+	"bornBirdSpeed": [35, 40],
+	"arrowBirdSpeed": [25, 30],
+	"normalBirdSpeed": [20, 25],
+
+	"bornBirdHeight": [90, 100],
+	"arrowBirdHeight": [75, 80],
+	"normalBirdHeight": [65, 50],
+
+	"birdIngredients": [2, 3, 7],
+	"birdInterval":[0.5, 1.5]
+}

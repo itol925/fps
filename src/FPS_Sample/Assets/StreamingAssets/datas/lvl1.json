@@ -1,0 +1,29 @@
+
+
+
+
+{
+	"name": "初出茅庐",
+
+	"needKillNum": 3,
+	"maxPassNum": 5,
+	"initArrowNum": 10,
+
+	"bowRotateSpeed": 12,
+	"bowRotateLeftAngle": -45,
+	"bowRotateRightAngle": 45,
+
+	"initArrowCDTime": 0,
+	"arrowBirdReward": 5,
+
+	"bornBirdSpeed": [35, 40],
+	"arrowBirdSpeed": [25, 30],
+	"normalBirdSpeed": [20, 25],
+
+	"bornBirdHeight": [80, 80],
+	"arrowBirdHeight": [60, 80],
+	"normalBirdHeight": [40, 50],
+
+	"birdIngredients": [0, 0, 5],
+	"birdInterval":[1, 3]
+}

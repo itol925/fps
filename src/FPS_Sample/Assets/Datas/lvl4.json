@@ -1,0 +1,29 @@
+
+
+
+
+{
+	"name": "斩箭",
+
+	"needKillNum": 30,
+	"maxPassNum": 1,
+	"initArrowNum": 10,
+
+	"bowRotateSpeed": 16,
+	"bowRotateLeftAngle": -45,
+	"bowRotateRightAngle": 45,
+
+	"initArrowCDTime": 0,
+	"arrowBirdReward": 5,
+
+	"bornBirdSpeed": [35, 40],
+	"arrowBirdSpeed": [30, 60],
+	"normalBirdSpeed": [20, 25],
+
+	"bornBirdHeight": [90, 100],
+	"arrowBirdHeight": [40, 100],
+	"normalBirdHeight": [40, 50],
+
+	"birdIngredients": [0, 5, 5],
+	"birdInterval":[0.5, 1.5]
+}

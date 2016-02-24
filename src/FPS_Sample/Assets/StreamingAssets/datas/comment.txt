@@ -1,0 +1,29 @@
+
+// ---------------------- 配置说明 ------------------------
+// ----------------注：json 文件里不能有注释 --------------
+
+{
+	"name": "Pass 1",				// 名字
+
+	"needKillNum": 5,				// 需要击杀数。值：0~1000
+	"maxPassNum": 40,				// 最大pass数。值：0~1000
+	"initArrowNum": 10,				// 初始箭支数。值：0~10000
+
+	"bowRotateSpeed": 12,			// 弓的转速。值：1~100
+	"bowRotateLeftAngle": -45,		// 左转角度。值：-90~0
+	"bowRotateRightAngle": 45,		// 右转角度。值：0~90
+
+	"initArrowCDTime": 0,			// 每支箭的CD时间。值：0~60
+	"arrowBirdReward": 5,			// 击中弓箭鸟奖励的箭支。值：1~100
+
+	"bornBirdSpeed": [30, 40],		// 爆炸鸟的飞行速度,区间。值：1~100
+	"arrowBirdSpeed": [20, 30],		// 弓箭鸟的飞行速度
+	"normalBirdSpeed": [10, 15],	// 普通鸟的飞行速度
+
+	"bornBirdHeight": [100, 100],	// 爆炸鸟的飞行高度。值：20~100
+	"arrowBirdHeight": [60, 70],	// 弓箭鸟的飞行高度
+	"normalBirdHeight": [20, 30].	// 普通鸟的飞行高度
+
+	"birdIngredients": [1, 2, 5],	// 各种鸟的数量，如[1, 2, 5]表示:每 5 只鸟里必然会出现 1 只爆炸鸟，2 只弓箭鸟
+	"birdInterval":[1, 3]			// 每只鸟出现的时间间隔，如[1, 3]表示:下一只鸟最短在 1 秒后，最迟在 3 秒后出现
+}

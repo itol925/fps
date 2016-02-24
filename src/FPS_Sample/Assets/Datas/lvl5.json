@@ -1,0 +1,29 @@
+
+
+
+
+{
+	"name": "火焰劫",
+
+	"needKillNum": 30,
+	"maxPassNum": 1,
+	"initArrowNum": 15,
+
+	"bowRotateSpeed": 20,
+	"bowRotateLeftAngle": -45,
+	"bowRotateRightAngle": 45,
+
+	"initArrowCDTime": 0,
+	"arrowBirdReward": 5,
+
+	"bornBirdSpeed": [50, 60],
+	"arrowBirdSpeed": [25, 30],
+	"normalBirdSpeed": [20, 25],
+
+	"bornBirdHeight": [40, 100],
+	"arrowBirdHeight": [75, 80],
+	"normalBirdHeight": [65, 50],
+
+	"birdIngredients": [5, 0, 5],
+	"birdInterval":[0.1, 0.75]
+}
