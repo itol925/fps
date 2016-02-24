@@ -2,7 +2,7 @@
 using System.Collections;
 using SimpleFramework;
 
-public class SoldierAnimation : LuaBehaviour
+public class SoldierAnimController : MonoBehaviour
 {
     private enum Clips {
         DefaultTake = 0,
@@ -47,18 +47,55 @@ public class SoldierAnimation : LuaBehaviour
         WalkBack,
         Weapon_Idle,        // T pose
     };
+
+    private Animation m_anim;
+    private Transform m_trans;
+    private string[] m_clips = new string[41];
+
     void Awake() {
-        Animation a = gameObject.GetComponent<Animation>();
-        
-        a.wrapMode = WrapMode.Loop;
+        m_anim = gameObject.GetComponent<Animation>();
+        m_trans = transform;
+        int i = 0;
+        foreach (AnimationState state in m_anim){
+            m_clips[i++] = state.name;
+        }
     }
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public void updateMoveState(Vector3 velocity) {
+        if (velocity == Vector3.zero)
+        {
+            Idle();
+        }
+        else {
+            Run(velocity);
+        }
+    }
+    void getAngle() {
+
+    }
+    void Idle() {
+        m_anim.CrossFade("Idle", 0.1f);
+    }
+    void Run(Vector3 velocity) {
+        if (velocity.z > 0)
+        {
+            m_anim.CrossFade("Walk_Run", 0.1f);
+            if (velocity.x > 0.5f)
+            {
+                m_anim.CrossFade("Walk_Run_FrontRight", 0.1f);
+                m_anim["Walk_Run_FrontRight"].wrapMode = WrapMode.Loop;
+            }
+            else if(velocity.x < -0.5f)
+            {
+                m_anim.CrossFade("Walk_Run_FrontLeft", 0.1f);
+                m_anim["Walk_Run_FrontRight"].wrapMode = WrapMode.Loop;
+            }
+        }
+        else {
+            m_anim.CrossFade("WalkBack", 0.1f);
+        }
+    }
+
+    void Jump(){
+        m_anim.CrossFade("", 0.1f);
+    }
 }

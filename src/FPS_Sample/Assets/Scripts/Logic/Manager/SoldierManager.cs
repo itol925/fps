@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SoldierManager : LuaBehaviour {
+    //------------------------------------------- singleton -----------------------------------------
     private static SoldierManager instance;
     public static SoldierManager getInstance() {
         if (instance == null) {
@@ -15,7 +16,7 @@ public class SoldierManager : LuaBehaviour {
     }
     private SoldierManager() { }
 
-    //-----------------------------------
+    //-------------------------------------------------------------------------------------
     private Transform parent;
     private List<Soldier> soldiers = new List<Soldier>();
     
@@ -52,7 +53,7 @@ public class SoldierManager : LuaBehaviour {
         go.transform.localPosition = data.initPos;
       
         Soldier soldier = go.AddComponent<Soldier>();
-        soldier.m_data = data;
+        soldier.Init(data);
         soldiers.Add(soldier);
 
         yield return new WaitForEndOfFrame();
@@ -62,6 +63,7 @@ public class SoldierManager : LuaBehaviour {
         Debug.Log("StartCreatePanel------>>>>" + name);
     }
 
+    // --------------------------------------------------------------------------------------
     public void LoadSoldiers() {
         List<SoldierData> list = getSoldiers();
         for (int i = 0; i < list.Count; i++){

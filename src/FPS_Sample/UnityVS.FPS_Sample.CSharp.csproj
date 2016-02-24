@@ -65,12 +65,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CharacterController\CharacterMotor.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\FPSInputController.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\MouseLook.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\PlatformInputController.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\ThirdPersonCamera.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\ThirdPersonController.cs" />
     <Compile Include="Assets\Scripts\Common\BehaviourBase.cs" />
     <Compile Include="Assets\Scripts\Common\GlobalGenerator.cs" />
     <Compile Include="Assets\Scripts\Common\LuaBehaviour.cs" />
@@ -83,8 +77,14 @@
     <Compile Include="Assets\Scripts\Logic\Manager\SoldierManager.cs" />
     <Compile Include="Assets\Scripts\Logic\Observer\AppViewObserver.cs" />
     <Compile Include="Assets\Scripts\Logic\Observer\SocketObserver.cs" />
+    <Compile Include="Assets\Scripts\Logic\Soldier\CharacterController\CharacterMotor.cs" />
+    <Compile Include="Assets\Scripts\Logic\Soldier\CharacterController\FPSInputController.cs" />
+    <Compile Include="Assets\Scripts\Logic\Soldier\CharacterController\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\Logic\Soldier\CharacterController\PlatformInputController.cs" />
+    <Compile Include="Assets\Scripts\Logic\Soldier\CharacterController\ThirdPersonCamera.cs" />
+    <Compile Include="Assets\Scripts\Logic\Soldier\CharacterController\ThirdPersonController.cs" />
     <Compile Include="Assets\Scripts\Logic\Soldier\Soldier.cs" />
-    <Compile Include="Assets\Scripts\Logic\Soldier\SoldierAnimation.cs" />
+    <Compile Include="Assets\Scripts\Logic\Soldier\SoldierAnimController.cs" />
     <Compile Include="Assets\Scripts\Logic\Soldier\SoldierData.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\AppView.cs" />
     <Compile Include="Assets\Scripts\Logic\UI\AppViewCtrl.cs" />

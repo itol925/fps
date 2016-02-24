@@ -67,16 +67,16 @@
  <HintPath>C:/Program Files (x86)/Unity4.6.7/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.7/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Debuger">
- <HintPath>E:/unity3dProjects/FPS_Sample/Assets/Plugins/Debuger.dll</HintPath>
+ <HintPath>E:/git/fps/src/FPS_Sample/Assets/Plugins/Debuger.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
- <HintPath>E:/unity3dProjects/FPS_Sample/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+ <HintPath>E:/git/fps/src/FPS_Sample/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.VisualStudio.Unity.Messaging">
- <HintPath>E:/unity3dProjects/FPS_Sample/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll</HintPath>
+ <HintPath>E:/git/fps/src/FPS_Sample/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll</HintPath>
  </Reference>
  <Reference Include="UnityVS.VersionSpecific">
- <HintPath>E:/unity3dProjects/FPS_Sample/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll</HintPath>
+ <HintPath>E:/git/fps/src/FPS_Sample/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity4.6.7/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

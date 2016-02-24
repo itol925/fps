@@ -4,19 +4,16 @@ using System.Collections;
 /**
  *  @Author : www.xuanyusong.com 
  */
-
-[RequireComponent(typeof(CharacterMotor))]
+ 
 [AddComponentMenu("Character/FPS Input Controller")]
 
 public class FPSInputController : MonoBehaviour
 {
-
-    private CharacterMotor motor;
-
-    // Use this for initialization
-    void Awake()
+    private Soldier m_target;
+    
+    void Start()
     {
-        motor = GetComponent<CharacterMotor>();
+        m_target = GetComponent<Soldier>();
     }
 
     // Update is called once per frame
@@ -42,10 +39,8 @@ public class FPSInputController : MonoBehaviour
             // Multiply the normalized direction vector by the modified length
             directionVector = directionVector * directionLength;
         }
-
-        // Apply the direction to the CharacterMotor
-        motor.inputMoveDirection = transform.rotation * directionVector;
-        motor.inputJump = Input.GetButton("Jump");
+        
+        m_target.ExcuteMoveCommand(transform.rotation * directionVector, Input.GetButton("Jump"));
     }
 
 }

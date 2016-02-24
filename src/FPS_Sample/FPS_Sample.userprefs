@@ -1,12 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\CharacterAnimation.js">
     <Files>
-      <File FileName="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\FPScontroller.js" Line="265" Column="43" />
-      <File FileName="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\CharacterAnimation.js" Line="72" Column="63" />
-      <File FileName="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\FPSinput.js" Line="19" Column="51" />
-      <File FileName="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\FPSMouseLook.js" Line="22" Column="1" />
-      <File FileName="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\FPSSoundController.js" Line="10" Column="1" />
+      <File FileName="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\FPScontroller.js" Line="1" Column="1" />
+      <File FileName="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\CharacterAnimation.js" Line="90" Column="30" />
+      <File FileName="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\FPSinput.js" Line="1" Column="1" />
+      <File FileName="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\FPSMouseLook.js" Line="1" Column="1" />
+      <File FileName="..\FPS\Assets\FPS Kit Version 2.0\_CustomAssets\Scripts\FPScontroller\FPSSoundController.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
