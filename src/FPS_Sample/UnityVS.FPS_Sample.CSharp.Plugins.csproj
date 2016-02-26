@@ -63,11 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Standard Assets\Water (Pro Only)\Sources\Scripts\Water.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Datas\comment.txt" />
     <None Include="Assets\Lua\System\readme.txt" />
+    <None Include="Assets\Standard Assets\DefaultResources\Normal-Bumped.shader" />
+    <None Include="Assets\Standard Assets\DefaultResources\Normal-Diffuse.shader" />
+    <None Include="Assets\Standard Assets\Shaders Pack\BlendedDecal.shader" />
+    <None Include="Assets\Standard Assets\Shaders Pack\Particle Add.shader" />
     <None Include="Assets\StreamingAssets\datas\comment.txt" />
     <None Include="Assets\StreamingAssets\files.txt" />
     <None Include="Assets\StreamingAssets\lua\System\readme.txt" />

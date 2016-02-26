@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.FPS_Sample.CSharp.Plugins", "UnityVS.FPS_Sample.CSharp.Plugins.csproj", "{6152FF8F-A33C-FBEE-939B-E5F9C3FEFC52}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.FPS_Sample.CSharp", "UnityVS.FPS_Sample.CSharp.csproj", "{364A5713-FE44-C29D-708A-9C5DD7EBA6EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.FPS_Sample.CSharp.Editor", "UnityVS.FPS_Sample.CSharp.Editor.csproj", "{BA4457FA-D31A-4ADB-347C-8655C34242AC}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6152FF8F-A33C-FBEE-939B-E5F9C3FEFC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6152FF8F-A33C-FBEE-939B-E5F9C3FEFC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6152FF8F-A33C-FBEE-939B-E5F9C3FEFC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6152FF8F-A33C-FBEE-939B-E5F9C3FEFC52}.Release|Any CPU.Build.0 = Release|Any CPU
 		{364A5713-FE44-C29D-708A-9C5DD7EBA6EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{364A5713-FE44-C29D-708A-9C5DD7EBA6EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{364A5713-FE44-C29D-708A-9C5DD7EBA6EC}.Release|Any CPU.ActiveCfg = Release|Any CPU

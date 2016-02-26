@@ -4,98 +4,142 @@ using SimpleFramework;
 
 public class SoldierAnimController : MonoBehaviour
 {
-    private enum Clips {
-        DefaultTake = 0,
-        Crouch_Idle,        // 蹲
-        Crouch_Walk,        // 蹲走
-        Crouch_Walk_Front_Left,
-        Crouch_Walk_Front_Right,
-        Crouch_Walk_Left,
-        Crouch_Walk_Right,
-        Fire_Still,         // 机枪开火
-        Idle,               // 端着机枪静止
-        Idle_Knife_Nade,    // 刀or手榴弹静止
-        Jump_Pose,          // T pose
-        KnifeHit,           // 捅刀
-        LandFromHeight,     // 高处落地
-        MeleeWithWeapon,    // 近身攻击
-        Pistol_Idle_Aim,    // 手枪瞄准
-        Pistol_Idle_Still,  // 手枪站立
-        Pistol_Fire,        // 手枪开枪
-        Pistol_Reload,      // 手枪换子弹
-        Pistol_TakeIn,      // 掏手枪
-        PrimaryTakeIn,      // 
-        Prone_Idle,         // 卧倒
-        Prone_Idle_Knife_Nade,// 卧倒持刀
-        Prone_Idle_Pistol,  // 卧倒持枪
-        Prone_KnifeMelee,   // 卧倒捅刀
-        Prone_Move_Front,   // 卧倒前进
-        Prone_Move_Left,
-        Prone_Move_Right,
-        Prone_NadeThrow,    // 卧倒投掷
-        Prone_Reload_Pistol,// 卧倒换子弹
-        Prone_Reload_Primary,
-        Reload,             // T-pose
-        Run,                // 跑步
-        Run_Front_Left,
-        Run_Front_Right,
-        ThrowNade,          // 投掷
-        Walk_Right,
-        Walk_Run,           // 端着机枪跑
-        Walk_Run_FrontLeft, 
-        Walk_Run_FrontRight,
-        WalkBack,
-        Weapon_Idle,        // T pose
-    };
+    //var poseAnimation : AnimationClip;
+	//Idle animations
+	public AnimationClip jumpPose;
+	public AnimationClip stayIdle;
+	public AnimationClip crouchIdle;
+	public AnimationClip proneIdle;
+	//Walk Animations
+	public AnimationClip walkFront;
+	public AnimationClip walkBack;
+	public AnimationClip walkLeft;
+	public AnimationClip walkRight;
+	//Run animations
+	public AnimationClip runFront;
+	//Crouch animations
+	public AnimationClip crouchFront;
+	public AnimationClip crouchLeft;
+	public AnimationClip crouchRight;
+	public AnimationClip crouchBack;
+	//Prone Animations
+	public AnimationClip proneFront;
+	public AnimationClip proneLeft;
+	public AnimationClip proneRight;
+	public AnimationClip proneBack;
+	//Weapon animations
+	public AnimationClip pistolIdle;
+	public AnimationClip knifeIdle;
+	public AnimationClip gunIdle;
+    
+    enum ActionState{ Stand, Crouch, Prone }
 
-    private Animation m_anim;
+    private ActionState m_state;
+    private CharacterMotor m_motor;
     private Transform m_trans;
-    private string[] m_clips = new string[41];
+    private Animation m_anim;
 
     void Awake() {
-        m_anim = gameObject.GetComponent<Animation>();
         m_trans = transform;
-        int i = 0;
-        foreach (AnimationState state in m_anim){
-            m_clips[i++] = state.name;
-        }
+        //m_anim = transform.FindChild("ExampleSoldier").gameObject.GetComponent<Animation>();
+        m_anim = GetComponent<Animation>();
+    }
+    void Start() {
+        m_motor = gameObject.GetComponent<CharacterMotor>();
+        //configureAnimations();
     }
     public void updateMoveState(Vector3 velocity) {
         if (velocity == Vector3.zero)
         {
-            Idle();
+            m_anim.CrossFade(gunIdle.name, 0.2f);
         }
         else {
-            Run(velocity);
+            m_anim.CrossFade(runFront.name, 0.2f);
         }
     }
-    void getAngle() {
-
+    public void updateJumpState(bool jump) {
+        if (jump){
+           Jump();
+        }
     }
+
+    public void UpdateFireState(int fire) {
+        Fire(fire);
+    }
+
     void Idle() {
-        m_anim.CrossFade("Idle", 0.1f);
     }
     void Run(Vector3 velocity) {
-        if (velocity.z > 0)
-        {
-            m_anim.CrossFade("Walk_Run", 0.1f);
-            if (velocity.x > 0.5f)
-            {
-                m_anim.CrossFade("Walk_Run_FrontRight", 0.1f);
-                m_anim["Walk_Run_FrontRight"].wrapMode = WrapMode.Loop;
-            }
-            else if(velocity.x < -0.5f)
-            {
-                m_anim.CrossFade("Walk_Run_FrontLeft", 0.1f);
-                m_anim["Walk_Run_FrontRight"].wrapMode = WrapMode.Loop;
-            }
-        }
-        else {
-            m_anim.CrossFade("WalkBack", 0.1f);
-        }
     }
 
     void Jump(){
-        m_anim.CrossFade("", 0.1f);
+    }
+    void Fire(int fire) {
+        
+    }
+
+    void configureAnimations(){
+	    //Set animations Wrap Mode and Speed
+	    if(stayIdle){
+		    m_anim[stayIdle.name].wrapMode = WrapMode.Loop;
+	    }
+	    if(crouchIdle){
+		    m_anim[crouchIdle.name].wrapMode = WrapMode.Loop;
+	    }
+	    if(proneIdle){
+		    m_anim[proneIdle.name].wrapMode = WrapMode.Loop;
+	    }
+	    if(walkFront){
+		    m_anim[walkFront.name].wrapMode = WrapMode.Loop;
+		    //m_anim[walkFront.name].speed = walkm_animsSpeed;
+	    }
+	    if(walkBack){
+		    m_anim[walkBack.name].wrapMode = WrapMode.Loop;
+		    //m_anim[walkBack.name].speed = walkm_animsSpeed;
+	    }
+	    if(walkLeft){
+		    m_anim[walkLeft.name].wrapMode = WrapMode.Loop;
+		    //m_anim[walkLeft.name].speed = walkm_animsSpeed;
+	    }
+	    if(walkRight){
+		    m_anim[walkRight.name].wrapMode = WrapMode.Loop;
+		    //m_anim[walkRight.name].speed = walkm_animsSpeed;
+	    }
+	    if(runFront){
+		    m_anim[runFront.name].wrapMode = WrapMode.Loop;
+		    //m_anim[runFront.name].speed = runm_animsSpeed;
+	    }
+	    if(crouchFront){
+		    m_anim[crouchFront.name].wrapMode = WrapMode.Loop;
+		    //m_anim[crouchFront.name].speed = crouchm_animsSpeed;
+	    }
+	    if(crouchLeft){
+		    m_anim[crouchLeft.name].wrapMode = WrapMode.Loop;
+		    //m_anim[crouchLeft.name].speed = crouchm_animsSpeed;
+	    }
+	    if(crouchRight){
+		    m_anim[crouchRight.name].wrapMode = WrapMode.Loop;
+		    //m_anim[crouchRight.name].speed = crouchm_animsSpeed;
+	    }
+	    if(crouchBack){
+		    m_anim[crouchBack.name].wrapMode = WrapMode.Loop;
+		    //m_anim[crouchBack.name].speed = crouchm_animsSpeed;
+	    }
+	    if(proneFront){
+		    m_anim[proneFront.name].wrapMode = WrapMode.Loop;
+		    //m_anim[proneFront.name].speed = pronem_animsSpeed;
+	    }
+	    if(proneLeft){
+		    m_anim[proneLeft.name].wrapMode = WrapMode.Loop;
+		    //m_anim[proneLeft.name].speed = pronem_animsSpeed;
+	    }
+	    if(proneRight){
+		    m_anim[proneRight.name].wrapMode = WrapMode.Loop;
+		    //m_anim[proneRight.name].speed = pronem_animsSpeed;
+	    }
+	    if(proneBack){
+		    m_anim[proneBack.name].wrapMode = WrapMode.Loop;
+		    //m_anim[proneBack.name].speed = pronem_animsSpeed;
+	    }
     }
 }

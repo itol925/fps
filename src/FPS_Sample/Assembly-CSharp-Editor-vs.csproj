@@ -54,10 +54,14 @@
      <Compile Include="Assets\uLua\Editor\Wrap\ToLua_System_String.cs" />
      <Compile Include="Assets\uLua\Editor\Wrap\ToLua_System_Type.cs" />
      <Compile Include="Assets\uLua\Editor\Wrap\ToLua_UnityEngine_Object.cs" />
+     <None Include="Assets\Standard Assets\Shaders Pack\Particle Add.shader" />
      <None Include="Assets\Datas\comment.txt" />
      <None Include="Assets\uLua\README.txt" />
+     <None Include="Assets\Standard Assets\Shaders Pack\BlendedDecal.shader" />
      <None Include="Assets\StreamingAssets\files.txt" />
+     <None Include="Assets\Standard Assets\DefaultResources\Normal-Diffuse.shader" />
      <None Include="Assets\StreamingAssets\datas\comment.txt" />
+     <None Include="Assets\Standard Assets\DefaultResources\Normal-Bumped.shader" />
      <None Include="Assets\Lua\System\readme.txt" />
      <None Include="Assets\StreamingAssets\lua\System\readme.txt" />
  <Reference Include="UnityEngine.UI">
@@ -83,6 +87,8 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{C425E183-DBAE-E60B-7307-5FE36A6D35C0}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-vs.csproj">
       <Project>{CE06FB08-52A8-8C63-4199-C6C32B3B7993}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
   </ItemGroup>

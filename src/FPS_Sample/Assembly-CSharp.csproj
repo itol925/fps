@@ -53,7 +53,6 @@
      <Compile Include="Assets\Scripts\ConstDefine\ManagerName.cs" />
      <Compile Include="Assets\Scripts\ConstDefine\NotiConst.cs" />
      <Compile Include="Assets\Scripts\Facade\AppFacade.cs" />
-     <Compile Include="Assets\Scripts\Logic\Manager\InputManager.cs" />
      <Compile Include="Assets\Scripts\Logic\Manager\MapManager.cs" />
      <Compile Include="Assets\Scripts\Logic\Manager\SoldierManager.cs" />
      <Compile Include="Assets\Scripts\Logic\Observer\AppViewObserver.cs" />
@@ -179,10 +178,14 @@
      <Compile Include="Assets\uLua\Source\LuaWrap\TransformWrap.cs" />
      <Compile Include="Assets\uLua\Source\LuaWrap\TypeWrap.cs" />
      <Compile Include="Assets\uLua\Source\LuaWrap\stringWrap.cs" />
+     <None Include="Assets\Standard Assets\Shaders Pack\Particle Add.shader" />
      <None Include="Assets\Datas\comment.txt" />
      <None Include="Assets\uLua\README.txt" />
+     <None Include="Assets\Standard Assets\Shaders Pack\BlendedDecal.shader" />
      <None Include="Assets\StreamingAssets\files.txt" />
+     <None Include="Assets\Standard Assets\DefaultResources\Normal-Diffuse.shader" />
      <None Include="Assets\StreamingAssets\datas\comment.txt" />
+     <None Include="Assets\Standard Assets\DefaultResources\Normal-Bumped.shader" />
      <None Include="Assets\Lua\System\readme.txt" />
      <None Include="Assets\StreamingAssets\lua\System\readme.txt" />
  <Reference Include="UnityEngine.UI">
@@ -191,6 +194,10 @@
  <Reference Include="Debuger">
  <HintPath>E:/git/fps/src/FPS_Sample/Assets/Plugins/Debuger.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{C425E183-DBAE-E60B-7307-5FE36A6D35C0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

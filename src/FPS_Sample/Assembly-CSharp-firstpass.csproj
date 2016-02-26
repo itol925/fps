@@ -46,18 +46,22 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Standard Assets\Water (Pro Only)\Sources\Scripts\Water.cs" />
+     <None Include="Assets\Standard Assets\Shaders Pack\Particle Add.shader" />
      <None Include="Assets\Datas\comment.txt" />
      <None Include="Assets\uLua\README.txt" />
+     <None Include="Assets\Standard Assets\Shaders Pack\BlendedDecal.shader" />
      <None Include="Assets\StreamingAssets\files.txt" />
+     <None Include="Assets\Standard Assets\DefaultResources\Normal-Diffuse.shader" />
      <None Include="Assets\StreamingAssets\datas\comment.txt" />
+     <None Include="Assets\Standard Assets\DefaultResources\Normal-Bumped.shader" />
      <None Include="Assets\Lua\System\readme.txt" />
      <None Include="Assets\StreamingAssets\lua\System\readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity4.6.7/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.7/Standalone/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Debuger">
- <HintPath>E:/unity3dProjects/FPS_Sample/Assets/Plugins/Debuger.dll</HintPath>
+ <HintPath>E:/git/fps/src/FPS_Sample/Assets/Plugins/Debuger.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

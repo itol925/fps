@@ -31,22 +31,21 @@ public class CharacterMotor : MonoBehaviour
     [System.Serializable]
     public class CharacterMotorMovement
     {
-
         // The maximum horizontal speed when moving
-        public float maxForwardSpeed = 10.0f;
-        public float maxSidewaysSpeed = 10.0f;
-        public float maxBackwardsSpeed = 10.0f;
+        public float maxForwardSpeed = 5.0f;
+        public float maxSidewaysSpeed = 3.0f;
+        public float maxBackwardsSpeed = 2.0f;
 
         // Curve for multiplying speed based on slope (negative = downwards)
         public AnimationCurve slopeSpeedMultiplier = new AnimationCurve(new Keyframe(-90, 1), new Keyframe(0, 1), new Keyframe(90, 0));
 
         // How fast does the character change speeds?  Higher is faster.
-        public float maxGroundAcceleration = 30.0f;
-        public float maxAirAcceleration = 20.0f;
+        public float maxGroundAcceleration = 100.0f;
+        public float maxAirAcceleration = 100.0f;
 
         // The gravity for the character
         public float gravity = 10.0f;
-        public float maxFallSpeed = 20.0f;
+        public float maxFallSpeed = 40.0f;
 
         // For the next variables, @System.NonSerialized tells Unity to not serialize the variable or show it in the inspector view.
         // Very handy for organization!
@@ -88,10 +87,10 @@ public class CharacterMotor : MonoBehaviour
         public bool enabled = true;
 
         // How high do we jump when pressing jump and letting go immediately
-        public float baseHeight = 1.0f;
+        public float baseHeight = 0.6f;
 
         // We add extraHeight units (meters) on top when holding the button down longer while jumping
-        public float extraHeight = 4.1f;
+        public float extraHeight = 0.05f;//4.1f;
 
         // How much does the character jump out perpendicular to the surface on walkable surfaces?
         // 0 means a fully vertical jump and 1 means fully perpendicular.
@@ -99,7 +98,7 @@ public class CharacterMotor : MonoBehaviour
 
         // How much does the character jump out perpendicular to the surface on too steep surfaces?
         // 0 means a fully vertical jump and 1 means fully perpendicular.
-        public float steepPerpAmount = 0.5f;
+        public float steepPerpAmount = 0.2f;
 
         // For the next variables, @System.NonSerialized tells Unity to not serialize the variable or show it in the inspector view.
         // Very handy for organization!
@@ -204,13 +203,14 @@ public class CharacterMotor : MonoBehaviour
     {
         // We copy the actual velocity into a temporary variable that we can manipulate.
         Vector3 velocity = movement.velocity;
-
+        //Debug.Log("00:"+velocity);
         // Update velocity based on input
         velocity = ApplyInputVelocityChange(velocity);
+        //Debug.Log("11:"+velocity);
 
         // Apply gravity and jumping force
         velocity = ApplyGravityAndJumping(velocity);
-
+        //Debug.Log("22:"+velocity);
         // Moving platform support
         Vector3 moveDistance = Vector3.zero;
         if (MoveWithPlatform())

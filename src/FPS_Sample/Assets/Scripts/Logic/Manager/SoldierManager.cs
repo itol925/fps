@@ -60,9 +60,8 @@ public class SoldierManager : LuaBehaviour {
 
         if (func != null)
             func.Call(go);
-        Debug.Log("StartCreatePanel------>>>>" + name);
     }
-
+    
     // --------------------------------------------------------------------------------------
     public void LoadSoldiers() {
         List<SoldierData> list = getSoldiers();
@@ -78,8 +77,8 @@ public class SoldierManager : LuaBehaviour {
         list.Add(soldier1);
         
         SoldierData soldier2 = new SoldierData();
-        soldier2.initPos = new Vector3(50, 0, 0);
-        list.Add(soldier2);
+        soldier2.initPos = new Vector3(5, 0, 0);
+        //list.Add(soldier2);
 
         return list;
     }

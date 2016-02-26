@@ -88,16 +88,43 @@ public class Packager {
 
         // --------------------------  生成 ---------------------------------
         BuildPipeline.PushAssetDependencies();
-        mainAsset = LoadAsset("Soldiers/Soldier.prefab");
-        assetfile = assetPath + "soldier.assetbundle";
+        mainAsset = LoadAsset("Soldiers/NetworkPlayer.prefab");
+        assetfile = assetPath + "networkplayer.assetbundle";
 		BuildPipeline.BuildAssetBundle(mainAsset, null, assetfile, options, target);
 		BuildPipeline.PopAssetDependencies();
 
         BuildPipeline.PushAssetDependencies();
+        mainAsset = LoadAsset("Soldiers/NetworkPlayer2.prefab");
+        assetfile = assetPath + "networkplayer2.assetbundle";
+		BuildPipeline.BuildAssetBundle(mainAsset, null, assetfile, options, target);
+		BuildPipeline.PopAssetDependencies();
+
+        BuildPipeline.PushAssetDependencies();
+        mainAsset = LoadAsset("Soldiers/Soldier.prefab");
+        assetfile = assetPath + "soldier.assetbundle";
+		BuildPipeline.BuildAssetBundle(mainAsset, null, assetfile, options, target);
+		BuildPipeline.PopAssetDependencies();
+        
+        BuildPipeline.PushAssetDependencies();
+        mainAsset = LoadAsset("Soldiers/Cube.prefab");
+        assetfile = assetPath + "cube.assetbundle";
+		BuildPipeline.BuildAssetBundle(mainAsset, null, assetfile, options, target);
+		BuildPipeline.PopAssetDependencies();
+
+        BuildPipeline.PushAssetDependencies();
+        mainAsset = LoadAsset("Soldiers/LookObject.prefab");
+        assetfile = assetPath + "lookobject.assetbundle";
+		BuildPipeline.BuildAssetBundle(mainAsset, null, assetfile, options, target);
+		BuildPipeline.PopAssetDependencies();
+        
+        BuildPipeline.PushAssetDependencies();
         mainAsset = LoadAsset("Maps/BunkerLevel.prefab");
         assetfile = assetPath + "bunkerlevel.assetbundle";
         BuildPipeline.BuildAssetBundle(mainAsset, null, assetfile, options, target);
-        BuildPipeline.PopAssetDependencies();        
+        BuildPipeline.PopAssetDependencies();      
+        
+
+        
 
         // -------------------------- audio 生成 ---------------------------------
         //BuildPipeline.PushAssetDependencies();
